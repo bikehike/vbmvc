@@ -1,12 +1,35 @@
 ﻿Imports System.Web
+Imports vbmvc
+
 Module BuildFields
 
     Public Class Column
         Inherits Attribute
+
         Public Property index As Integer
         Public Property name As String
         Sub New()
         End Sub
+
+    End Class
+
+    Public Interface IFieldProvider
+        Function Fields() As IList(Of String)
+
+    End Interface
+
+    Public Class FieldProvider
+        Implements IFieldProvider
+
+        Public Property index As Integer
+        Public Property name As String
+        Private Shared Property SharedFields As IList(Of String)
+        Sub New()
+        End Sub
+
+        Public Function Fields() As IList(Of String) Implements IFieldProvider.Fields
+            Return SharedFields
+        End Function
     End Class
 
     <Column(index:=0, name:="f1")>
@@ -89,6 +112,16 @@ Module BuildFields
     Public Class Customer
         Sub New(s As Action(Of String), a As Integer)
         End Sub
+    End Class
+
+    Public Class OrderFields
+        Implements IFieldProvider
+        Private Shared Property SharedFields As IList(Of String)
+        Sub New(s As Action(Of String), a As Integer)
+        End Sub
+        Public Function Fields() As IList(Of String) Implements IFieldProvider.Fields
+            Return SharedFields
+        End Function
     End Class
 
     <Column(index:=0, name:="F2")>

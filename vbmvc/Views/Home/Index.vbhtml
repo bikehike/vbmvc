@@ -1,31 +1,24 @@
-﻿@Code
+﻿@ModelType IEnumerable(Of Integer)
+@Code
     ViewData("Title") = "Home Page"
+
+    Dim bobModel As New BobModel()
+    bobModel.simpleCounter = Model.First
+
 End Code
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+@helper  bobhelp(a As String, b As String)
+    @Html.Label(a, b)
+End Helper
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+@bobhelp("c", "c")
+
+@Html.help(Function() Model)
+
+@Using Html.BeginForm("scroll", "Home", FormMethod.Post, New With {.class = "form-horizontal", .role = "form"})
+    @Html.AntiForgeryToken()
+    @Html.Partial("BobModelPartial", bobModel)
+    @<p>index value @Html.Value(Model.First)</p>
+    @<p>index value @Html.Editor(Model.First)</p>
+    @<button type="submit" name="button">submit</button>
+End Using

@@ -1,8 +1,22 @@
 ﻿Public Class HomeController
     Inherits System.Web.Mvc.Controller
 
-    Function Index() As ActionResult
-        Return View()
+    Private Shared staticCounter As New Integer
+
+    <HttpGet>
+    Function Index(bobModel As BobModel) As ActionResult
+        Dim model As New List(Of Integer)()
+        If bobModel Is Nothing Then
+            bobModel = New BobModel()
+        End If
+        bobModel.simpleCounter += 1
+        model.Add(bobModel.simpleCounter)
+        Return View(model)
+    End Function
+
+    <HttpPost>
+    Function scroll(bobModel As BobModel) As ActionResult
+        Return RedirectToAction("Index", bobModel)
     End Function
 
     Function About() As ActionResult

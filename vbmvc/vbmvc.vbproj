@@ -203,7 +203,9 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HtmlExtensions.vb" />
     <Compile Include="Models\AccountViewModels.vb" />
+    <Compile Include="Models\BobModel.vb" />
     <Compile Include="Models\BuildFields.vb" />
     <Compile Include="Models\IdentityModels.vb" />
     <Compile Include="Models\ManageViewModels.vb" />
@@ -273,6 +275,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.vbhtml" />
     <Content Include="Views\Shared\Lockout.vbhtml" />
     <Content Include="Views\Shared\_LoginPartial.vbhtml" />
+    <Content Include="Views\Home\BobModelPartial.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

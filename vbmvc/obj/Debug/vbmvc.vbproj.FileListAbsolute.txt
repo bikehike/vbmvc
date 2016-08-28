@@ -1,6 +1,3 @@
-C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\obj\Debug\vbmvc.vbprojResolveAssemblyReference.cache
-C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\obj\Debug\vbmvc.Resources.resources
-C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\obj\Debug\vbmvc.vbproj.GenerateResource.Cache
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\bin\roslyn\csc.exe
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -68,6 +65,9 @@ C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\bin\Microsoft.Owi
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\obj\Debug\vbmvc.Resources.resources
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\obj\Debug\vbmvc.vbproj.GenerateResource.Cache
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\obj\Debug\vbmvc.dll
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\obj\Debug\vbmvc.xml
 C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\obj\Debug\vbmvc.pdb
+C:\Users\Bob\Documents\Visual Studio 2015\Projects\vbmvc\vbmvc\obj\Debug\vbmvc.vbprojResolveAssemblyReference.cache
